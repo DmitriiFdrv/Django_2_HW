@@ -17,11 +17,7 @@
 
 		<div class="details">
 			<div class="links clearfix">
-				<ul class="links-menu">
-					{% for link_item in links_menu %}
-					<li><a href="{% url link_item.url %}">{{ link_item.title}}</a></li>
-					{% endfor %}
-				</ul>
+				{% include 'mainapp/includes/inc_categories_menu.html' %}
 			</div>
 {% endblock %}
 			{% block content%}

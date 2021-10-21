@@ -2,11 +2,17 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'mainapp/index.html')
+    context = {
+        'title': 'Главная'
+    }
+    return render(request, 'mainapp/index.html', context=context)
 
 
 def contact(request):
-    return render(request, 'mainapp/contact.html')
+    context = {
+        'title': 'Контакты'
+    }
+    return render(request, 'mainapp/contact.html', context=context)
 
 
 links_menu = [
@@ -40,34 +46,39 @@ links_menu = [
 def products(request):
 
     context = {
-        'lincs_menu': links_menu
+        'links_menu': links_menu,
+        'title': 'продукты'
     }
     return render(request, 'mainapp/products.html', context=context)
 
 
 def products_home(request):
     context = {
-        'lincs_menu': links_menu
+        'links_menu': links_menu,
+        'title': 'продукты для дома'
     }
     return render(request, 'mainapp/products.html', context=context)
 
 
 def products_office(request):
     context = {
-        'lincs_menu': links_menu
+        'links_menu': links_menu,
+        'title': 'продукты для офиса'
     }
     return render(request, 'mainapp/products.html', context=context)
 
 
 def products_modern(request):
     context = {
-        'lincs_menu': links_menu
+        'links_menu': links_menu,
+        'title': 'продукты модерн'
     }
     return render(request, 'mainapp/products.html', context=context)
 
 
 def products_classic(request):
     context = {
-        'lincs_menu': links_menu
+        'links_menu': links_menu,
+        'title': 'продукты классика'
     }
     return render(request, 'mainapp/products.html', context=context)
