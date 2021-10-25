@@ -266,6 +266,10 @@ html, body {
 	width: 270px;
 	position: relative;
 }
+.tab-content .block indeximg{
+	height: 100%;
+	width: auto;
+}
 .tab-content a .text {
 	display: none;
 	height: 268px;
@@ -797,6 +801,7 @@ td:first-child {
 .products .block a img {
 	float: left;
 }
+
 .products .block {
 	float: left;
 	margin: 15px;
