@@ -1,0 +1,58 @@
+[
+  {
+    "category": "дом",
+    "name": "стул дом1",
+    "image": "products/product-1.jpg",
+    "price": 1499,
+    "quantity": 13
+  },
+  {
+    "category": "дом",
+    "name": "кресло дом2",
+    "image": "products/product-2.jpg",
+    "price": 2999,
+    "quantity": 15
+  },
+    {
+    "category": "офис",
+    "name": "стул офис1",
+    "image": "products/product-3.jpg",
+    "price": 3999,
+    "quantity": 5
+  },
+  {
+    "category": "офис",
+    "name": "Суперкресло офис2",
+    "image": "products/product-4.jpg",
+    "price": 9999,
+    "quantity": 3
+  },
+    {
+    "category": "модерн",
+    "name": "пуфик модерн1",
+    "image": "products/product-11.jpg",
+    "price": 5399,
+    "quantity": 6
+  },
+    {
+    "category": "модерн",
+    "name": "кресло-качалка модерн2",
+    "image": "products/product-21.jpg",
+    "price": 13599,
+    "quantity": 2
+  },
+  {
+    "category": "классика",
+    "name": "стул обеденный классика1",
+    "image": "products/product-31.jpg",
+    "price": 4599,
+    "quantity": 12
+  },
+  {
+    "category": "классика",
+    "name": "кресло классика2",
+    "image": "products/product-41.jpg",
+    "price": 15599,
+    "quantity": 3
+  }
+]
