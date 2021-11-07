@@ -1,0 +1,47 @@
+<ul class="menu">
+  <li>
+    <a href="{% url 'main' %}">
+      на сайт
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'admin:users' %}"
+       class="{% if request.resolver_match.url_name == 'users' %}
+                active
+              {% endif %}">
+      пользователи
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'admin:categories' %}"
+       class="{% if request.resolver_match.url_name == 'categories' or
+                                                        category.name %}
+                active
+              {% endif %}">
+      категории
+      {% if category %}
+        :<span>{{ category.name }}</span>
+      {% endif %}
+    </a>
+  </li>
+  {% if user.is_authenticated %}
+    <li>
+      <a href="{% url 'auth:edit' %}">
+        {{ user.first_name|default:'Пользователь' }}
+      </a>
+    </li>
+  {% endif %}
+  {% if user.is_superuser %}
+    <li>
+      <a href="{% url 'admin:users' %}">админка</a>
+    </li>
+  {% endif %}
+  <li>
+    {% if user.is_authenticated %}
+      <a href="{% url 'auth:logout' %}">выйти</a>
+    {% else %}
+      <a href="{% url 'auth:login' %}">войти</a>
+    {% endif %}
+  </li>
+
+</ul>
