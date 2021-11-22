@@ -18,9 +18,12 @@ from django.urls import path, include
 from mainapp import views as mainapp
 from django.conf import settings
 from django.conf.urls.static import static
+from django.urls import re_path
 
 
 urlpatterns = [
+    re_path(r'^$', mainapp.index, name='index'),
+    re_path(r'^products/', include('mainapp.urls', namespace='products')),
     path('', mainapp.index, name='index'),
     path('contact/', mainapp.contact, name='contact'),
     path('products/', include('mainapp.urls', namespace='products')),
