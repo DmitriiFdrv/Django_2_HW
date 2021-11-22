@@ -36,9 +36,6 @@ def contact(request):
     return render(request, 'mainapp/contact.html', context=context)
 
 
-
-
-
 def products(request, pk=None, page=1):
     title = 'продукты'
     links_menu = ProductCategory.objects.filter(is_active=True)
