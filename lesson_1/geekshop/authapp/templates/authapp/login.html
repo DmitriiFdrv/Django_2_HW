@@ -13,15 +13,5 @@
         <input class="btn btn-pimary" type="submit" value="войти">
     </form>
     <hr>
-    <button class="btn btn-round form-control">
-    <a href="{% url 'auth:register' %}" class="">
-        Зарегистрироваться
-    </a>
-    </button>
-    <button class="btn btn-round form-control">
-        <a href="{% url 'social:begin' 'vk-oauth2' %}?next=/">
-         Вход через ВКонтакте
-        </a>
-    </button>
-
+    <a href="{% url 'auth:register' %}">регистрация</a>
 {% endblock %}
